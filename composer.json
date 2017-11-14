@@ -1,6 +1,7 @@
 {
     "name": "matthewbdaly/laravel-flatpages",
     "description": "Laravel flat pages package. Inspired by Django's flatpages",
+    "keywords": ["flatpages","laravel","cms","pages"],
     "type": "library",
     "require-dev": {
         "orchestra/testbench": "^3.5",
@@ -15,5 +16,12 @@
             "email": "matthewbdaly@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Matthewbdaly\\LaravelFlatpages\\FlatpageServiceProvider"
+            ]
+        }
+    }
 }
