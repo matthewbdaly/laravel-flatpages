@@ -33,5 +33,4 @@ class FlatpageTest extends TestCase
         $repo = new Flatpage($model);
         $this->assertEquals(true, $repo->findByPath('/about/'));
     }
-
 }
