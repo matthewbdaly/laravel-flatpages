@@ -9,6 +9,18 @@ use Mockery as m;
 class FlatpageTest extends TestCase
 {
     /**
+     * Test get model
+     *
+     * @return void
+     */
+    public function testGetModel()
+    {
+        $model = new \Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage;
+        $repo = new Flatpage($model);
+        $this->assertEquals('Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage', $repo->getModel());
+    }
+
+    /**
      * Test find by path
      *
      * @return void
@@ -21,4 +33,5 @@ class FlatpageTest extends TestCase
         $repo = new Flatpage($model);
         $this->assertEquals(true, $repo->findByPath('/about/'));
     }
+
 }
