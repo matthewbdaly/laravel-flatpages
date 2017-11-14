@@ -15,6 +15,9 @@ class CreateFlatpagesTable extends Migration
     {
         Schema::create('flatpages', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('path');
+            $table->string('title');
+            $table->text('content');
             $table->timestamps();
         });
     }
