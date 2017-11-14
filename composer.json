@@ -17,6 +17,16 @@
         }
     ],
     "require": {},
+    "autoload": {
+        "psr-4": {
+            "Matthewbdaly\\LaravelFlatpages\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
