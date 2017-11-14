@@ -6,4 +6,11 @@ use Matthewbdaly\LaravelRepositories\Repositories\Interfaces\AbstractRepositoryI
 
 interface Flatpage extends AbstractRepositoryInterface
 {
+    /**
+     * Get flatpage
+     *
+     * @param string $path The flatpage path.
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function findByPath(string $path);
 }
