@@ -10,4 +10,12 @@ class TestCase extends BaseTestCase
 	{
 		return ['Matthewbdaly\LaravelFlatpages\Providers\FlatpageServiceProvider'];
     }
+
+    public function setUp()
+    {
+        parent::setUp();
+        $this->artisan('migrate', ['--database' => 'sqlite']);
+        $this->loadLaravelMigrations(['--database' => 'sqlite']);
+        $this->withFactories(__DIR__.'/factories');
+    }
 }
