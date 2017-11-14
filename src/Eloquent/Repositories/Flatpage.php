@@ -4,7 +4,7 @@ namespace Matthewbdaly\LaravelFlatpages\Eloquent\Repositories;
 
 use Matthewbdaly\LaravelRepositories\Repositories\Base;
 use Matthewbdaly\LaravelFlatpages\Contracts\Repositories\Flatpage as FlatpageContract;
-use  Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage as Model;
+use Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage as Model;
 
 class Flatpage extends Base implements FlatpageContract
 {
