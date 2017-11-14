@@ -30,7 +30,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Matthewbdaly\\LaravelFlatpages\\FlatpageServiceProvider"
+                "Matthewbdaly\\LaravelFlatpages\\Providers\\FlatpageServiceProvider"
             ]
         }
     }

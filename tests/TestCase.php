@@ -8,6 +8,6 @@ class TestCase extends BaseTestCase
 {
 	protected function getPackageProviders($app)
 	{
-		return ['Matthewbdaly\LaravelFlatpages\FlatpageServiceProvider'];
+		return ['Matthewbdaly\LaravelFlatpages\Providers\FlatpageServiceProvider'];
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFlatpages\Eloquent\Models;
+namespace Matthewbdaly\LaravelFlatpages\Eloquent\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
