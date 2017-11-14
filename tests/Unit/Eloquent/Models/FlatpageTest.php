@@ -9,11 +9,11 @@ class FlatpageTest extends TestCase
 {
     public function testCreateFlatpage()
     {
-        $obj = new Flatpage([
-            'path' => '/about/',
-            'title' => 'About me',
-            'content' => 'Welcome to my site'
-        ]);
+        $obj = new Flatpage;
+        $obj->path = '/about/';
+        $obj->title = 'About me';
+        $obj->content = 'Welcome to my site';
+        $obj->save();
         $page = Flatpage::first();
         $this->assertEquals('/about/', $page->path);
         $this->assertEquals('About me', $page->title);
