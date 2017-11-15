@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="PHP_CodeSniffer">
-	<description>Coding standard for Microsoft Azure Blob Storage integration.</description>
+	<description>Coding standard for Laravel Flatpages.</description>
 	<file>src</file>
 	<arg value="np"/>
 	<rule ref="PSR2"/>
