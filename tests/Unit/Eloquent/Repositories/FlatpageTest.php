@@ -28,9 +28,9 @@ class FlatpageTest extends TestCase
     public function testFindByPath()
     {
         $model = m::mock('Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage');
-        $model->shouldReceive('where')->with('path', '/about/')->once()->andReturn($model);
+        $model->shouldReceive('where')->with('slug', '/about/')->once()->andReturn($model);
         $model->shouldReceive('first')->once()->andReturn(true);
         $repo = new Flatpage($model);
-        $this->assertEquals(true, $repo->findByPath('/about/'));
+        $this->assertEquals(true, $repo->findBySlug('/about/'));
     }
 }

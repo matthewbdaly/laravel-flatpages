@@ -16,11 +16,11 @@ class Flatpage extends Base implements FlatpageContract
     /**
      * Get flatpage
      *
-     * @param string $path The flatpage path.
+     * @param string $slug The flatpage slug.
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function findByPath(string $path)
+    public function findBySlug(string $slug)
     {
-        return $this->model->where('path', $path)->first();
+        return $this->model->where('slug', $slug)->first();
     }
 }

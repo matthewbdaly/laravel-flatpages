@@ -21,6 +21,6 @@ class FlatpageTest extends TestCase
         $cache->shouldReceive('tags')->with('Flatpage')->once()->andReturn($cache);
         $cache->shouldReceive('remember')->once()->andReturn(true);
         $decorator = new Flatpage($repo, $cache);
-        $this->assertEquals(true, $decorator->findByPath('/about/'));
+        $this->assertEquals(true, $decorator->findBySlug('/about/'));
     }
 }

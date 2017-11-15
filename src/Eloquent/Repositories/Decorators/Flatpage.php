@@ -15,15 +15,15 @@ class Flatpage extends BaseDecorator implements FlatpageContract
     }
 
     /**
-     * Get flatpage by path
+     * Get flatpage by slug
      *
-     * @param string $path The flatpage path.
+     * @param string $slug The flatpage slug.
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function findByPath(string $path)
+    public function findBySlug(string $slug)
     {
-        return $this->cache->tags($this->getModel())->remember('path_'.$path, 60, function () use ($path) {
-            return $this->repository->findPath($path);
+        return $this->cache->tags($this->getModel())->remember('slug_'.$slug, 60, function () use ($slug) {
+            return $this->repository->findBySlug($slug);
         });
     }
 }

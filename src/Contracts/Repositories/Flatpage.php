@@ -9,8 +9,8 @@ interface Flatpage extends AbstractRepositoryInterface
     /**
      * Get flatpage
      *
-     * @param string $path The flatpage path.
+     * @param string $slug The flatpage slug.
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function findByPath(string $path);
+    public function findBySlug(string $slug);
 }

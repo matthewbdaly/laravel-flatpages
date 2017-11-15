@@ -10,12 +10,12 @@ class FlatpageTest extends TestCase
     public function testCreateFlatpage()
     {
         $obj = new Flatpage;
-        $obj->path = '/about/';
+        $obj->slug = '/about/';
         $obj->title = 'About me';
         $obj->content = 'Welcome to my site';
         $obj->save();
         $page = Flatpage::first();
-        $this->assertEquals('/about/', $page->path);
+        $this->assertEquals('/about/', $page->slug);
         $this->assertEquals('About me', $page->title);
         $this->assertEquals('Welcome to my site', $page->content);
         $this->assertNotNull($page->created_at);
