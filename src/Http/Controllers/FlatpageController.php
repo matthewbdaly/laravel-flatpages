@@ -38,6 +38,6 @@ class FlatpageController extends BaseController
     public function page($path)
     {
         $page = $this->repository->findBySlug($path);
-        return response()->json($page, 200);
+        return view('flatpages::base', $page);
     }
 }

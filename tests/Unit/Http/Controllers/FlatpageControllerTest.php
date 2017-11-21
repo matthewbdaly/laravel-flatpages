@@ -11,11 +11,11 @@ class FlatpageControllerTest extends TestCase
     public function testGetFlatpage()
     {
         $flatpage = m::mock('Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage');
-        $flatpage->shouldReceive('toJson')->once()->andReturn(json_encode([
+        $flatpage->shouldReceive('toArray')->once()->andReturn([
             'id' => 1,
             'title' => 'About me',
             'content' => 'All about me'
-        ]));
+        ]);
         $repo = m::mock('Matthewbdaly\LaravelFlatpages\Contracts\Repositories\Flatpage');
         $repo->shouldReceive('findBySlug')->with('/about/')->once()->andReturn($flatpage);
         $controller = new FlatpageController($repo);
