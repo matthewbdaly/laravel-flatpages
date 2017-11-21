@@ -21,6 +21,6 @@ class Flatpage extends Base implements FlatpageContract
      */
     public function findBySlug(string $slug)
     {
-        return $this->model->where('slug', $slug)->first();
+        return $this->model->where('slug', $slug)->firstOrFail();
     }
 }

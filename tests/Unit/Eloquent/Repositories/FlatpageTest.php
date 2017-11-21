@@ -29,7 +29,7 @@ class FlatpageTest extends TestCase
     {
         $model = m::mock('Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage');
         $model->shouldReceive('where')->with('slug', '/about/')->once()->andReturn($model);
-        $model->shouldReceive('first')->once()->andReturn(true);
+        $model->shouldReceive('firstOrFail')->once()->andReturn(true);
         $repo = new Flatpage($model);
         $this->assertEquals(true, $repo->findBySlug('/about/'));
     }
