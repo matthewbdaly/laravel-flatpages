@@ -6,8 +6,16 @@ use Matthewbdaly\LaravelRepositories\Repositories\Base;
 use Matthewbdaly\LaravelFlatpages\Contracts\Repositories\Flatpage as FlatpageContract;
 use Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage as Model;
 
+/**
+ * Flatpage repository
+ */
 class Flatpage extends Base implements FlatpageContract
 {
+    /**
+     * Constructor
+     *
+     * @param Model $model The model for the repository.
+     */
     public function __construct(Model $model)
     {
         $this->model = $model;
