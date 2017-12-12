@@ -37,7 +37,7 @@ class FlatpageController extends BaseController
      */
     public function page($path)
     {
-        $page = $this->repository->findBySlug($path);
+        $page = $this->repository->findBySlug("/$path/");
         return view('flatpages::base', ['flatpage' => $page]);
     }
 }

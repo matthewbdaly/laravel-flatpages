@@ -19,7 +19,7 @@ class FlatpageControllerTest extends TestCase
         $repo = m::mock('Matthewbdaly\LaravelFlatpages\Contracts\Repositories\Flatpage');
         $repo->shouldReceive('findBySlug')->with('/about/')->once()->andReturn($flatpage);
         $controller = new FlatpageController($repo);
-        $response = $controller->page('/about/');
+        $response = $controller->page('about');
         $this->assertEquals('flatpages::base', $response->getName());
         $data = $response->getData()['flatpage']->toArray();
         $this->assertEquals(1, $data['id']);
