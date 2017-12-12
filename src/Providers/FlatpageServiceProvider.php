@@ -27,7 +27,7 @@ class FlatpageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Matthewbdaly\LaravelFlatpages\Contracts\Flatpage', function () {
+        $this->app->singleton('Matthewbdaly\LaravelFlatpages\Contracts\Repositories\Flatpage', function () {
             $baseRepo = new \Matthewbdaly\LaravelFlatpages\Eloquent\Repositories\Flatpage(new \Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage);
             $cachingRepo = new \Matthewbdaly\LaravelFlatpages\Eloquent\Repositories\Decorators\Flatpage($baseRepo, $this->app['cache.store']);
             return $cachingRepo;
