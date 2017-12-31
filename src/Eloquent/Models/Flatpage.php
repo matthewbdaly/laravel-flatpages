@@ -11,4 +11,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Flatpage extends Model
 {
     use SoftDeletes;
+
+    protected $fillable = [
+        'content',
+        'title',
+        'slug',
+    ];
 }
