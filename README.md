@@ -23,7 +23,7 @@ The controller lives at `Matthewbdaly\LaravelFlatpages\Http\Controllers\Flatpage
 Route::get('{path}', '\Matthewbdaly\LaravelFlatpages\Http\Controllers\FlatpageController@page');
 ```
 
-Alternatively, you can use the middleware at `Matthewbdaly\LaravelFlatpages\Http\Middleware\FlatpageMiddleware`, which may be more convenient. Be aware it will run on every 404 response received.
+Alternatively, you can use the middleware at `Matthewbdaly\LaravelFlatpages\Http\Middleware\FlatpageMiddleware`, which may be more convenient. Be aware it will run on every 404 response received, and it should be set as the last global middleware.
 
 Overriding the view
 -------------------
