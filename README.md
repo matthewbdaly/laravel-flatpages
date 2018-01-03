@@ -26,4 +26,6 @@ Route::get('{path}', '\Matthewbdaly\LaravelFlatpages\Http\Controllers\FlatpageCo
 Overriding the view
 -------------------
 
-The view used is `flatpages::base`, but this almost certainly isn't what you want, so you'll need to create a new version in your project at `resources\views\vendor\flatpages\base`. Obviously this can extend or include other views in the usual manner.
+The default view used is `flatpages::base`, but this almost certainly isn't what you want, so you'll need to create a new version in your project at `resources\views\vendor\flatpages\base`. Obviously this can extend or include other views in the usual manner.
+
+Every flatpage object has a `template` field. This defaults to null, which will use `flatpages::base`, but you can set it to point at any other view you want to use. Your view will obviously need to use the same variables as the default one, but using this method you can create multiple views that can be used by one or more templates, meaning that part of the content can be kept in the view and part in the database. This makes the package more flexible in that you can choose which content users can manage themselves and which you can control.
