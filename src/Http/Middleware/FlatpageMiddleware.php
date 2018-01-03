@@ -4,6 +4,7 @@ namespace Matthewbdaly\LaravelFlatpages\Http\Middleware;
 
 use Closure;
 use Matthewbdaly\LaravelFlatpages\Contracts\Repositories\Flatpage;
+use Illuminate\Http\Response;
 
 class FlatpageMiddleware
 {
@@ -30,7 +31,7 @@ class FlatpageMiddleware
                 if (!$template = $page->template) {
                     $template = 'flatpages::base';
                 }
-                return view($template, ['flatpage' => $page]);
+                return new Response(view($template, ['flatpage' => $page]));
             }
         }
         return $response;
