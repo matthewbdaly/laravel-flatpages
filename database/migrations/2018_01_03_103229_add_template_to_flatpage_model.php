@@ -13,7 +13,9 @@ class AddTemplateToFlatpageModel extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('flatpages', function (Blueprint $table) {
+            $table->string('template')->nullable();
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ class AddTemplateToFlatpageModel extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('flatpages', function (Blueprint $table) {
+            $table->dropColumn('template');
+        });
     }
 }
