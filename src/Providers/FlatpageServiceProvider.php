@@ -18,6 +18,9 @@ class FlatpageServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
         $this->loadViewsFrom(__DIR__.'/../views', 'flatpages');
+        $this->publishes([
+            __DIR__.'/../views' => resource_path('views/vendor/flatpages'),
+        ]);
     }
 
     /**
